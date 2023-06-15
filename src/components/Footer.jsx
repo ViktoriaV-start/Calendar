@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '../Button';
+import { Button } from './Button';
 import { useContext } from 'react';
 import { VisibilityContext } from '../VisibilityContext';
 

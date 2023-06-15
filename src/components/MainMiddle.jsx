@@ -35,13 +35,19 @@ const Wrapper = styled.div`
     display: block;
     position: absolute;
     top: 80%;
-    left: 20px;
+    left: 3%;
   }
 
-  @media(max-width: 739.9px) {
+
+ @media(max-width: 767.9px) {
     &::before {
-    top: 83%;
-    left: 5px;
+    left: 2%;
+  }
+ }
+
+ @media(max-width: 575.9px) {
+    &::before {
+    left: 0.5%;
     font-size: 1rem;
   }
  }
