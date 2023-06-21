@@ -6,7 +6,7 @@ const WeekDays = styled.span`
 font-size: 1rem;
 font-weight: 500;
 
-@media(max-width: 739.9px) {
+@media(max-width: 729.9px) {
   font-size: 0.8rem;
 }
 `;

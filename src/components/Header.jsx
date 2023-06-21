@@ -13,7 +13,7 @@ const Wrapper = styled.section`
 const HeaderText = styled.div`
   font-size: 2.3rem;
 
-  @media(max-width: 739.9px) {
+  @media(max-width: 729.9px) {
     font-size: 2rem;
   }
 `;

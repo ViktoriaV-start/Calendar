@@ -17,12 +17,12 @@ const Wrapper = styled.section`
 
   @media(max-width: 739.9px) {
     width: 100vw;
-    min-width: 350px;
+    min-width: 250px;
   }
   `;
 
   const HeaderWrap = styled.section`
-      position: sticky;
+    position: sticky;
     top: 0;
     z-index: 5;
   `;

@@ -20,10 +20,16 @@ cursor: pointer;
 color: ${({ selected, active }) => ((selected === active) ? "#ffffff" : "#000000")};
 background-color: ${({ selected, active }) => ((selected === active) ? "#f60909" : "none")};
 
-@media(max-width: 739.9px) {
+@media(max-width: 729.9px) {
   font-size: 1.5rem;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@media(max-width: 439.9px) {
+  font-size: 1rem;
+  width: 1.9rem;
+  height: 1.9rem;
 }
 `;
 

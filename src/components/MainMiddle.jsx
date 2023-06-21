@@ -39,22 +39,36 @@ const Wrapper = styled.div`
   }
 
 
- @media(max-width: 767.9px) {
+ @media(max-width: 659.9px) {
     &::before {
     left: 2%;
   }
  }
 
- @media(max-width: 575.9px) {
+ @media(max-width: 589.9px) {
+    &::before {
+    left: 1%;
+    font-size: 1rem;
+  }
+
+  @media(max-width: 399.9px) {
+    &::before {
+    left: 0.8%;
+    font-size: 0.8rem;
+    }
+  }
+
+  @media(max-width: 299.9px) {
     &::before {
     left: 0.5%;
-    font-size: 1rem;
+    font-size: 0.7rem;
+    }
   }
  }
 `;
 
 const Cell = styled.div`
-position: relative;
+  position: relative;
   width: 100%;
 
   &::before {
@@ -64,13 +78,13 @@ position: relative;
     padding: 37%;
   }
 
-border-bottom: 2px solid #ebebeb;
-border-right: ${({ border }) => ((border === 'false') ? "none" : "2px solid #ebebeb")};
+  border-bottom: 2px solid #ebebeb;
+  border-right: ${({ border }) => ((border === 'false') ? "none" : "2px solid #ebebeb")};
 `;
 
 const CellIn = styled.div`
 
-position: absolute;
+  position: absolute;
   top: 3.5%;
   left: 1.5%;
   right: 0;

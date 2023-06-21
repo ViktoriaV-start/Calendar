@@ -26,6 +26,10 @@ const Text = styled.span`
   justify-content: center;
   grid-column-start: 2;
   grid-column-end: 7;
+
+  @media(max-width: 439.9px) {
+  font-size: 1.3rem;
+}
 `;
 
 
@@ -36,7 +40,7 @@ export const Navigation = () => {
         <Days />
         <Dates />
         <ArrowLeft />
-        <Text>March 2019</Text>
+        <Text>June 2023</Text>
         <ArrowRight />
       </WeekWrap>
     </Wrapper>
