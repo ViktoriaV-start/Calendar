@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 
-const startDate = 25;
-const selectedDate = 29;
+const startDate = 5;
+const selectedDate = 9;
 const week = startDate + 7;
 
 const WeekDates = styled.span`

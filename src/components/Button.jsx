@@ -6,8 +6,8 @@ const Wrapper = styled.section`
   font-size: 1.6rem;
   cursor: pointer;
 
-  @media(max-width: 439.9px) {
-  font-size: 1.3rem;
+  @media(max-width: 575.9px) {
+  font-size: 1.1rem;
   }
   `;
 

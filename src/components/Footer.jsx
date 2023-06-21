@@ -14,6 +14,10 @@ const Wrapper = styled.section`
   position: sticky;
   bottom: 0;
   z-index: 5;
+
+  @media(max-width: 575.9px) {
+    padding: 4%;
+  }
   `;
 
 export const Footer = () => {
