@@ -75,7 +75,7 @@ const Cell = styled.div`
     display: block;
     content: '';
     width: 100%;
-    padding: 37%;
+    padding-top: 80%;
   }
 
   border-bottom: 2px solid #ebebeb;
@@ -85,12 +85,12 @@ const Cell = styled.div`
 const CellIn = styled.div`
 
   position: absolute;
-  top: 3.5%;
-  left: 1.5%;
+  top: 2.5%;
+  left: 2.5%;
   right: 0;
   bottom: 0;
 
-  height: 94%;
+  height: 95%;
   width: 95%;
   
   background-color: ${({ date, time }) => ((active[+date]?.includes(time)) ? "#ebecff" : "")};

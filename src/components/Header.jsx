@@ -8,6 +8,14 @@ const Wrapper = styled.section`
   justify-content: space-between;
   align-items: center;
   font-weight: 200;
+
+  @media(max-width: 729.9px) {
+    padding: 3%;
+  }
+
+  @media(max-width: 575.9px) {
+  padding: 3%;
+  }
   `;
 
 const HeaderText = styled.div`
@@ -16,12 +24,20 @@ const HeaderText = styled.div`
   @media(max-width: 729.9px) {
     font-size: 2rem;
   }
+
+  @media(max-width: 575.9px) {
+  font-size: 1.3rem;
+  }
 `;
 
 const HeaderButton = styled.span`
   font-size: 3.6rem;
   color: red;
   cursor: pointer;
+
+  @media(max-width: 575.9px) {
+  font-size: 2rem;
+  }
 `;
 
 export const Header = () => {
