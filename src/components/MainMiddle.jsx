@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useContext } from 'react';
 import { VisibilityContext } from '../VisibilityContext';
 
 
-const time = ['00:00', '00:01', '00:02', '00:03', '00:04', '00:05', '00:06', '00:07', '00:08','09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',];
+const time = ['00:00', '01:0', '02:0', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00','09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',];
 const days = [0, 1, 2, 3, 4, 5];
 const active = {
   5: ['13:00', ],
@@ -100,16 +100,40 @@ export const MainMiddle = () => {
   const { toggleVisibility } = useContext(VisibilityContext);
   const [elem, setElem] = useState(null);
 
+  const focusRef = useRef(null);
+
+  const currentHour = new Date().toLocaleTimeString().split(':')[0];
+
+  const getHour = (time) => {
+    return time.split(':')[0];
+  }
+
+  useEffect(() => {
+    if (focusRef.current) {
+      focusRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'start'
+      });
+    };
+  }, []);
+
   const getContent = (time) => {
     let content = [];
 
     days.map((day) => {
       let date = startingDate + day;
-      content.push(<Cell border="true" time={time} date={date} key={day}><CellIn onClick={(e) => handleClickEvent(e)} date={date} time={time} /></Cell>);
+      content.push(<Cell
+                      border="true"
+                      time={time}
+                      date={date}
+                      key={day}>
+                        <CellIn onClick={(e) => handleClickEvent(e)} date={date} time={time} /></Cell>
+                  );
     });
 
     content.push(<Cell border="false" key={7}><CellIn onClick={(e) => handleClickEvent(e)} date={(startingDate + 6)} time={time} /></Cell>);
-    return <Wrapper time={time} key={time}>{content}</Wrapper>;
+    return <Wrapper ref={(currentHour == getHour(time)) ? focusRef : null} time={time} key={time}>{content}</Wrapper>;
   };
 
   const handleClickEvent = (e) => {
